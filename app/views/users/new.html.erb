@@ -1,0 +1,28 @@
+<h2>Sign Up</h2>
+
+<%= form_with(model: @user, local: true) do |ff| %>
+
+    <div>
+        <%= ff.label :name %>
+        <%= ff.text_field :name %>
+
+    </div>
+    <div>
+        <%= ff.label :email %>
+        <%= ff.email_field :email %>
+        
+    </div>
+    <div>
+        <%= ff.label :password %>
+        <%= ff.password_field :password %>
+        
+    </div>
+    <div>
+        <%= ff.label :password_confirmation %>
+        <%= ff.password_field :password_confirmation %>
+
+    </div>
+
+    <%= ff.submit %>
+
+<% end %>
