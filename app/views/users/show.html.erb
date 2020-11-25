@@ -1,0 +1,27 @@
+<h1>Profile</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Stories
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <%= @user.name %>
+            </td>
+            <td>
+                <% @stories.each do |s|%>
+                    <%= link_to s.title, story_path(s.id) %>
+                    ,
+                <% end %>
+            </td>
+        </tr>
+    </tbody>
+</table>
