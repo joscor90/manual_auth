@@ -2,25 +2,27 @@
 
 <%= form_with(model: @user, local: true) do |ff| %>
 
-    <div>
-        <%= ff.label :name %>
-        <%= ff.text_field :name %>
+    <div class="form-group">
+        <div class='field'>
+            <%= ff.label :name %>
+            <%= ff.text_field :name, class: 'form-control' %>
 
-    </div>
-    <div>
-        <%= ff.label :email %>
-        <%= ff.email_field :email %>
-        
-    </div>
-    <div>
-        <%= ff.label :password %>
-        <%= ff.password_field :password %>
-        
-    </div>
-    <div>
-        <%= ff.label :password_confirmation %>
-        <%= ff.password_field :password_confirmation %>
+        </div>
+        <div class='field'>
+            <%= ff.label :email %>
+            <%= ff.email_field :email, class: 'form-control'%>
+            
+        </div>
+        <div class='field'>
+            <%= ff.label :password %>
+            <%= ff.password_field :password, class: 'form-control' %>
+            
+        </div>
+        <div class='field'>
+            <%= ff.label :password_confirmation %>
+            <%= ff.password_field :password_confirmation, class: 'form-control' %>
 
+        </div>
     </div>
 
     <%= ff.submit %>
